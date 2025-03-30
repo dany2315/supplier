@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    /* Brand Colors */
+    --brand-pink: 346 64% 59%;
+    --brand-teal: 166 44% 60%;
+    --brand-yellow: 49 100% 62%;
+    --brand-blue: 199 83% 69%;
+    
+    --primary: 346 64% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 166 44% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 49 100% 62%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 346 64% 59%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    
+    /* Darker background for cards to create contrast */
+    --card: 224 71% 2%;
+    --card-foreground: 213 31% 91%;
+    
+    --popover: 224 71% 2%;
+    --popover-foreground: 215 20.2% 91%;
+    
+    /* Brand Colors (adjusted for dark mode) */
+    --brand-pink: 346 64% 69%;
+    --brand-teal: 166 44% 70%;
+    --brand-yellow: 49 100% 72%;
+    --brand-blue: 199 83% 79%;
+    
+    --primary: 346 64% 69%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 166 44% 70%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Muted colors with better contrast */
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 75%;
+    
+    --accent: 49 100% 72%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders and inputs with better visibility */
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 346 64% 69%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.text-brand-pink {
+  color: hsl(var(--brand-pink));
+}
+
+.text-brand-teal {
+  color: hsl(var(--brand-teal));
+}
+
+.text-brand-yellow {
+  color: hsl(var(--brand-yellow));
+}
+
+.text-brand-blue {
+  color: hsl(var(--brand-blue));
+}
+
+.bg-brand-pink {
+  background-color: hsl(var(--brand-pink));
+}
+
+.bg-brand-teal {
+  background-color: hsl(var(--brand-teal));
+}
+
+.bg-brand-yellow {
+  background-color: hsl(var(--brand-yellow));
+}
+
+.bg-brand-blue {
+  background-color: hsl(var(--brand-blue));
+}
