@@ -13,7 +13,8 @@ export default async function Layout({ children }: DashboardLayoutProps) {
     data: { user },
     error,
   } = await supabase.auth.getUser()
-
+  console.log("userDashboard", user);
+  
   // 🔐 Si pas connecté, on redirige vers login (ou accueil)
   if (!user) {
     redirect('/')

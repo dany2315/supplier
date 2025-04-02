@@ -33,8 +33,6 @@ export default function DashboardPage() {
     if (!session?.user.id) return;
     
     try {
-      console.log("azer",session.user)
-      // Get suppliers stats
       const { data: suppliersData, error: suppliersError } = await supabase
         .from('suppliers')
         .select('id, is_active')

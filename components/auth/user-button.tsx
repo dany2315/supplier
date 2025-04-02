@@ -63,7 +63,7 @@ export function UserButton({ collapsed }: UserButtonProps) {
         description: "You have been logged out successfully",
       });
 
-      router.push("/auth/login");
+      router.push("/");
       router.refresh();
     } catch (error) {
       toast({
